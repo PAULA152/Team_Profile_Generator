@@ -1,0 +1,26 @@
+{
+  "name": "Team_Profile_Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PAULA152/Team_Profile_Generator"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PAULA152/Team_Profile_Generator/issuess"
+  },
+  "homepage": "https://github.com/PAULA152/Team_Profile_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
