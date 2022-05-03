@@ -16,7 +16,7 @@ const promptManager = () => {
             name: 'name',
             message: 'List your name.',
             validate: nameInput => {
-                if(nameInput) {
+                if (nameInput) {
                     return true;
                 } else {
                     console.log('Please enter your name before you continue');
@@ -29,7 +29,7 @@ const promptManager = () => {
             name: 'employeeId',
             message: 'Enter your ID number.',
             validate: employeeId => {
-                if(employeeId) {
+                if (employeeId) {
                     return true;
                 } else {
                     console.log('Please enter your employee ID before you continue');
@@ -42,7 +42,7 @@ const promptManager = () => {
             name: 'email',
             message: 'Enter your email',
             validate: email => {
-                if(email) {
+                if (email) {
                     return true;
                 } else {
                     console.log('Please enter your email before you continue');
@@ -55,7 +55,7 @@ const promptManager = () => {
             name: 'officeNumber',
             message: 'Enter your office number',
             validate: officeNumber => {
-                if(officeNumber) {
+                if (officeNumber) {
                     return true;
                 } else {
                     console.log('Please enter your office number before you continue');
@@ -79,20 +79,20 @@ const promptMenu = () => {
             message: 'Please select which role you would like to add.',
             choices: ['Engineer', 'Intern', 'Finished building team']
         }
-    ]) 
-    .then (userChoice => {
-        console.log(userChoice);
-        switch (userChoice.menu) {
-            case "Engineer":
-                promptEngineer();
-                break;
-            case 'Intern':
-                promptIntern();
-                break;
-            default:
-                buildTeam();
-        }
-    })
+    ])
+        .then(userChoice => {
+            console.log(userChoice);
+            switch (userChoice.menu) {
+                case "Engineer":
+                    promptEngineer();
+                    break;
+                case 'Intern':
+                    promptIntern();
+                    break;
+                default:
+                    buildTeam();
+            }
+        })
 };
 
 const promptEngineer = () => {
@@ -116,7 +116,7 @@ const promptEngineer = () => {
             name: 'employeeId',
             message: 'Enter your ID number.',
             validate: employeeId => {
-                if(employeeId) {
+                if (employeeId) {
                     return true;
                 } else {
                     console.log('Please enter your employee ID before you continue');
@@ -129,7 +129,7 @@ const promptEngineer = () => {
             name: 'email',
             message: 'Enter your email',
             validate: email => {
-                if(email) {
+                if (email) {
                     return true;
                 } else {
                     console.log('Please enter your email before you continue');
@@ -142,7 +142,7 @@ const promptEngineer = () => {
             name: 'githubUsername',
             message: 'Enter your github username',
             validate: githubUsername => {
-                if(githubUsername) {
+                if (githubUsername) {
                     return true;
                 } else {
                     console.log('Please enter your github username before you continue');
@@ -155,7 +155,7 @@ const promptEngineer = () => {
         const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.githubUsername);
         teamMembers.push(engineer);
         promptMenu();
-    }) 
+    })
 };
 
 const promptIntern = () => {
@@ -179,7 +179,7 @@ const promptIntern = () => {
             name: 'employeeId',
             message: 'Enter your ID number.',
             validate: employeeId => {
-                if(employeeId) {
+                if (employeeId) {
                     return true;
                 } else {
                     console.log('Please enter your employee ID before you continue');
@@ -192,7 +192,7 @@ const promptIntern = () => {
             name: 'email',
             message: 'Enter your email',
             validate: email => {
-                if(email) {
+                if (email) {
                     return true;
                 } else {
                     console.log('Please enter your email before you continue');
@@ -205,7 +205,7 @@ const promptIntern = () => {
             name: 'school',
             message: 'Enter your school',
             validate: school => {
-                if(school) {
+                if (school) {
                     return true;
                 } else {
                     console.log('Please enter your school before you continue');
@@ -222,7 +222,7 @@ const promptIntern = () => {
 };
 
 const buildTeam = () => {
-    console.log('buildTeam',teamMembers);
+    console.log('buildTeam', teamMembers);
     if (!fs.existsSync(OUTPUT_DIR)) { //check if files exist
         fs.mkdirSync(OUTPUT_DIR) // if not make a new file
     }
